@@ -1,0 +1,21 @@
+.contInfoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contInfoItem {
+    display: flex;
+    gap: 6px;
+}
+
+.contBtn {
+    background-color: rgb(201, 216, 254);
+    border: 1px solid #000000;
+    border-radius: 2px;
+    height: 25px;
+}
+
+.contBtn:hover {
+    background-color: rgb(179, 201, 255);
+}
