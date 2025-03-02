@@ -6,7 +6,7 @@ import ContactList from './components/ContactList/ContactList';
 // import styles
 import './App.css'
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from './redux/contactsOps';
+import { fetchContacts } from './redux/contacts/operations';
 // import { addContact } from './redux/contactsSlice';
 
 
