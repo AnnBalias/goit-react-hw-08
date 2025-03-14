@@ -1,7 +1,14 @@
 import { Field, Form, Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import css from "./LoginForm.module.css"
+import { useDispatch } from "react-redux";
+import { loginThunk } from "../../redux/auth/operations";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const initialValues = {
         email: "",
@@ -10,26 +17,32 @@ const LoginForm = () => {
 
     const hendSub = (values, options) => {
         console.log(values);
+        dispatch(loginThunk(values))
+            .unwrap()
+            .then(response => {
+                navigate('/contacts');
+                toast.success(`Welcome, ${response.user.name}`)
+            })
+            .catch(() => toast.error('Invalid data'));
         options.resetForm();
     }
 
     return (
         <div>
-            <p>Login</p>
             <Formik initialValues={initialValues} onSubmit={hendSub}>
-                <Form>
-                    <label>
+                <Form className={css.loginForm}>
+                    <label className={css.formLabel}>
                         <span>Email</span>
-                        <Field name="email" type="email"/>
+                        <Field name="email" type="email" className={css.formField}/>
                     </label>
-                    <label>
+                    <label className={css.formLabel}>
                         <span>Password</span>
-                        <Field name="password" type="password"/>
+                        <Field name="password" type="password" className={css.formField}/>
                     </label>
-                    <button type="submit">Login</button>
+                    <button type="submit" className={css.formBtn}>Login</button>
                 </Form>
             </Formik>
-            <p>If you don't have an account yet <Link to="/register">register here</Link></p>
+            <p className={css.note}>If you don`t have an account yet <Link to="/register" className={css.noteLink}>register here</Link></p>
         </div>
     );
 };

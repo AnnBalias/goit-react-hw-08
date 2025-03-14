@@ -1,5 +1,7 @@
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+
 const NotFoundPage = () => {
-  return <p>NotFoundPage</p>;
+  return <ErrorMessage />;
 };
 
 export default NotFoundPage;

@@ -1,0 +1,34 @@
+.errorBox {
+    padding: 8px 15px 12px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(20, 20, 20);
+}
+
+.errorMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.errorSpan {
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+.btn {
+    text-decoration: none;
+    border: 1px solid #000000;
+    background-color: rgb(201, 216, 254);
+    color: #000000;
+    padding: 12px;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: rgb(179, 201, 255);
+    }
+}
