@@ -1,0 +1,22 @@
+.header {
+    background-color: rgb(201, 216, 254);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    padding: 8px 12px;
+    border-radius: 0 0 4px 4px;
+}
+
+.userEmail {
+    margin-bottom: 8px;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+}
+
+.homeItem {
+    margin-right: 80px;
+}

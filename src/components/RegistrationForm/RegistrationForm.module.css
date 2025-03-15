@@ -46,3 +46,7 @@
     color: rgb(122, 145, 206);
     text-decoration: none;
 }
+
+.noteLink:hover {
+    color: rgb(46, 79, 169);
+}

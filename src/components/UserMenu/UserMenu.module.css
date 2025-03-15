@@ -1,0 +1,31 @@
+.userNav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.link {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: rgb(98, 32, 240);
+}
+
+.active {
+    color: rgb(98, 32, 240);
+}
+
+.logoutBtn {
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: aliceblue;
+    padding: 2px 12px;
+   
+}
+
+.logoutBtn:hover {
+    background-color: rgb(179, 201, 255);
+}
