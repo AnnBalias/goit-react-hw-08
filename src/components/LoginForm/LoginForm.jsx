@@ -21,7 +21,7 @@ const LoginForm = () => {
             .unwrap()
             .then(response => {
                 navigate('/contacts');
-                toast.success(`Welcome, ${response.user.name}`)
+                toast.success(`Welcome back, ${response.user.name}`)
             })
             .catch(() => toast.error('Invalid data'));
         options.resetForm();

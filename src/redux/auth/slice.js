@@ -8,10 +8,10 @@ import {
 
 const initialState = {
   user: {
-    name: "",
-    email: "",
+    name: null,
+    email: null,
   },
-  token: "",
+  token: null,
   isLoggedIn: false,
   isRefreshing: false,
 };

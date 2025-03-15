@@ -21,7 +21,7 @@ const RegistrationForm = () => {
             .unwrap()
             .then(response => {
                 navigate('/contacts');
-                toast.success(`Welcome back, ${response.user.name}`)
+                toast.success(`Welcome, ${response.user.name}`)
             })
             .catch(() => toast.error('Invalid data'));;
         console.log(values);

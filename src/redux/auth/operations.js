@@ -17,7 +17,7 @@ export const registerThunk = createAsyncThunk(
   "auth/register",
   async (body, thunkAPI) => {
     try {
-      const { data } = await api.post("/users/register", body);
+      const { data } = await api.post("/users/signup", body);
       setAuthHeader(data.token);
       return data;
     } catch (error) {
@@ -43,7 +43,7 @@ export const logoutThunk = createAsyncThunk(
   "auth/logout",
   async (_, thunkAPI) => {
     try {
-      await api.post("/users/login");
+      await api.post("/users/logout");
       clearAuthHeader();
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
