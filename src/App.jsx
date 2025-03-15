@@ -7,7 +7,7 @@ import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import Layout from './components/layout/layout';
+import Layout from './components/Layout/Layout';
 import { refreshThunk } from './redux/auth/operations';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import PrivateRoute from './PrivateRoute';
